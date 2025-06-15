@@ -1,0 +1,84 @@
+:root {
+    --color-red: #E40303;
+    --color-orange: #FF8C00;
+    --color-yellow: #FFED00;
+    --color-green: #008026;
+    --color-blue: #004DFF;
+    --color-violet: #750787;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-dark: #222;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--color-red), var(--color-orange), var(--color-yellow), var(--color-green), var(--color-blue), var(--color-violet)); /* Pride gradient background */
+    color: var(--text-light);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+.profile-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--text-light);
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-button {
+    display: block;
+    background-color: var(--text-light);
+    color: var(--text-dark);
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.link-button:hover {
+    background-color: #eee;
+    transform: translateY(-2px);
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.8em;
+    opacity: 0.8;
+}
