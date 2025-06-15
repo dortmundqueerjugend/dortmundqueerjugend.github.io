@@ -11,7 +11,7 @@
     --button-bg: #fff; /* White background for buttons */
     --button-hover-bg: #f0f0f0; /* Light grey on hover */
     --container-bg: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
-    --footer-text: rgba(255, 255, 255, 0.7); /* Lighter text for footer */
+    --footer-text: rgba(255, 255, 255, 0.7);
 }
 
 body {
