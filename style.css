@@ -1,17 +1,18 @@
 :root {
-    --color-red: #E40303;
-    --color-orange: #FF8C00;
-    --color-yellow: #FFED00;
-    --color-green: #008026;
-    --color-blue: #004DFF;
-    --color-violet: #750787;
+    --color-red: #f0a3a3;    /* Softer Red */
+    --color-orange: #f7d294; /* Softer Orange */
+    --color-yellow: #fdf5b9; /* Softer Yellow */
+    --color-green: #a7d9a7;  /* Softer Green */
+    --color-blue: #a3c9e6;   /* Softer Blue */
+    --color-violet: #c9a3e6; /* Softer Violet */
 
-    --text-primary: #fff; /* White text for main content */
-    --text-button: #333; /* Dark text for buttons */
-    --button-bg: #fff; /* White background for buttons */
+    /* General text and background colors - adjust these too for overall harmony */
+    --text-primary: #333; /* Darker text for readability on lighter background */
+    --text-button: #333;  /* Dark text for buttons */
+    --button-bg: #fff;    /* White background for buttons */
     --button-hover-bg: #f0f0f0; /* Light grey on hover */
-    --container-bg: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
-    --footer-text: rgba(255, 255, 255, 0.7);
+    --container-bg: rgba(255, 255, 255, 0.85); /* Slightly opaque white container for contrast */
+    --footer-text: rgba(51, 51, 51, 0.7); /* Darker text for footer */
 }
 
 body {
@@ -23,7 +24,7 @@ body {
     align-items: center;     
     min-height: 100vh;       
     
-    /* Pride gradient background */
+    /* Pride gradient background using softer colors */
     background: linear-gradient(135deg, 
         var(--color-red), 
         var(--color-orange), 
@@ -35,10 +36,11 @@ body {
     background-size: cover; 
     background-attachment: fixed; 
 
-    color: var(--text-primary);
+    color: var(--text-primary); /* Use primary text color */
     text-align: center;
     box-sizing: border-box; 
 }
+
 
 .container {
     background-color: var(--container-bg); 
