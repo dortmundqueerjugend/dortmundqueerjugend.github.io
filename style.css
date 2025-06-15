@@ -1,5 +1,4 @@
 :root {
-    /* Basic dark mode colors */
     --bg-dark: #1a1a1a;        /* Very dark background */
     --text-light: #f0f0f0;     /* Off-white text */
     --link-bg: #333;           /* Darker background for buttons */
@@ -7,50 +6,47 @@
     --link-text: #f0f0f0;      /* Light text on dark buttons */
     --border-color: #555;      /* Subtle border color */
     
-    /* Subtle Pride Colors for accents (e.g., for the line) */
     --pride-red: #E40303;
     --pride-orange: #FF8C00;
     --pride-yellow: #FFED00;
     --pride-green: #008026;
     --pride-blue: #004DFF;
     --pride-violet: #750787;
+
+    --button-hover-accent: var(--pride-violet); 
 }
 
-/* --- Base Styles --- */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* System font stack */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--bg-dark); /* Solid dark background */
+    background-color: var(--bg-dark);
     color: var(--text-light);
     text-align: center;
     box-sizing: border-box;
 }
 
 .container {
-    /* No explicit background for container, it just sits on the body background */
     padding: 30px;
     border-radius: 15px;
-    /* Subtle shadow if you want it, or remove for ultimate minimalism */
-    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); */ 
-    max-width: 400px; /* Slightly narrower than previous Bio.Link example */
+    max-width: 400px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.profile-logo { /* Keep this style even if commented out in HTML, in case you enable it */
+.profile-logo {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 2px solid var(--text-light); /* Subtle border */
+    border: 2px solid var(--text-light);
 }
 
 h1 {
@@ -63,41 +59,43 @@ p {
     font-size: 1em;
     margin-bottom: 30px;
     line-height: 1.5;
-    opacity: 0.8; /* Slightly subdue description text */
+    opacity: 0.8;
 }
 
 .links {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Space between buttons */
-    width: 100%; /* Buttons take full width of container */
+    gap: 15px;
+    width: 100%;
 }
 
 .link-button {
     display: block; 
-    background-color: var(--link-bg); /* Dark background for buttons */
-    color: var(--link-text); /* Light text on dark buttons */
+    background-color: var(--link-bg); 
+    color: var(--link-text);
     padding: 15px 20px;
-    border-radius: 8px; /* Slightly less rounded */
+    border-radius: 8px; 
     text-decoration: none; 
-    font-weight: 600; /* Medium bold */
+    font-weight: 600; 
     font-size: 1.1em;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    border: 1px solid var(--border-color); /* Subtle border for buttons */
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
+    border: 1px solid var(--border-color);
 }
 
 .link-button:hover {
-    background-color: var(--link-hover-bg); /* Darker grey on hover */
-    transform: translateY(-1px); /* Very subtle lift */
+    background-color: var(--link-hover-bg); 
+    color: var(--button-hover-accent);
+    transform: translateY(-1px); 
+    border-color: var(--button-hover-accent);
 }
 
 footer {
     margin-top: 40px;
     font-size: 0.75em;
     color: var(--text-light);
-    opacity: 0.6; /* More subdued footer text */
-    position: relative; /* For the pride line */
-    padding-top: 10px; /* Space for the line */
+    opacity: 0.6;
+    position: relative;
+    padding-top: 10px;
 }
 
 .pride-line {
@@ -105,7 +103,7 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px; /* Thin line */
+    height: 4px;
     background: linear-gradient(to right, 
         var(--pride-red), 
         var(--pride-orange), 
@@ -114,11 +112,9 @@ footer {
         var(--pride-blue), 
         var(--pride-violet)
     );
-    border-radius: 2px; /* Slightly rounded ends for the line */
+    border-radius: 2px;
 }
 
-
-/* --- Responsive Adjustments --- */
 @media (max-width: 600px) {
     body {
         padding: 15px;
